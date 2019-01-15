@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WereHouse.ViewModels
 {
-    public class CreateVM
+    public class DetailsVM
     {
         [Key]
         public int Id { get; set; }
@@ -18,16 +18,17 @@ namespace WereHouse.ViewModels
         public string Brand { get; set; }
 
         [Display(Name = "Description:")]
-        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
         [Display(Name = "Quantity in Stock:")]
         public int Qty { get; set; } //In stock
 
         [Display(Name = "Cost:")]
+        [DisplayFormat(DataFormatString = "{0:c}")]
         public double Cost { get; set; }
 
         [Display(Name = "Sale Price:")]
+        [DisplayFormat(DataFormatString = "{0:c}")]
         public double Price { get; set; }
 
         [Display(Name = "Country of Origin:")]
@@ -50,8 +51,5 @@ namespace WereHouse.ViewModels
         [Display(Name = "Date Updated:")]
         [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
         public DateTimeOffset? DateUp { get; set; }//Updating date for the field
-
-
-
     }
 }

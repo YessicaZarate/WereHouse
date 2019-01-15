@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
-
 namespace WereHouse.ViewModels
 {
-    public class CreateVM
+    public class EditVM
     {
         [Key]
         public int Id { get; set; }
@@ -25,9 +24,11 @@ namespace WereHouse.ViewModels
         public int Qty { get; set; } //In stock
 
         [Display(Name = "Cost:")]
+        [DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
         public double Cost { get; set; }
 
         [Display(Name = "Sale Price:")]
+        [DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
         public double Price { get; set; }
 
         [Display(Name = "Country of Origin:")]
@@ -40,18 +41,7 @@ namespace WereHouse.ViewModels
         public int Warranty { get; set; } //In weeks
 
         [Display(Name = "Acquisition Date (DD/MM/YYYY):")]
-        [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}", ApplyFormatInEditMode = true)]
         public DateTimeOffset? DateAd { get; set; } //Date when the items arrived
-
-        [Display(Name = "Date Created:")]
-        [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
-        public DateTimeOffset? DateCr { get; set; } //Creation date for the field
-
-        [Display(Name = "Date Updated:")]
-        [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
-        public DateTimeOffset? DateUp { get; set; }//Updating date for the field
-
-
-
     }
 }

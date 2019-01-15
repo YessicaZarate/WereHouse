@@ -23,10 +23,12 @@ namespace WereHouse.ViewModels
         [Display(Name = "Quantity in Stock:")]
         public int Qty { get; set; } //In stock
 
+        [DisplayFormat(DataFormatString = "{0:c}")]
         [Display(Name = "Cost:")]
         public double Cost { get; set; }
 
         [Display(Name = "Sale Price:")]
+        [DisplayFormat(DataFormatString = "{0:c}")]
         public double Price { get; set; }
     }
 }
