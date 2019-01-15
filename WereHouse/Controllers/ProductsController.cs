@@ -209,12 +209,25 @@ namespace WereHouse.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Products products = await db.Products.FindAsync(id);
-            if (products == null)
+            DeleteVM model = new DeleteVM();
+            Products prods = await db.Products.FindAsync(id);
+            if (prods == null)
             {
                 return HttpNotFound();
             }
-            return View(products);
+
+            model.Item = prods.Item;
+            model.Brand = prods.Brand;
+            model.Description = prods.Description;
+            model.Qty = prods.Qty;
+            model.Cost = prods.Cost;
+            model.Price = prods.Price;
+            model.Country = prods.Country;
+            model.Provider = prods.Provider;
+            model.Warranty = prods.Warranty;
+            model.DateAd = prods.DateAd;
+
+            return View(model);
         }
 
         // POST: Products/Delete/5

@@ -153,6 +153,7 @@
     <Compile Include="Models\WereHouseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CreateVM.cs" />
+    <Compile Include="ViewModels\DeleteVM.cs" />
     <Compile Include="ViewModels\DetailsVM.cs" />
     <Compile Include="ViewModels\EditVM.cs" />
     <Compile Include="ViewModels\IndexVM.cs" />
