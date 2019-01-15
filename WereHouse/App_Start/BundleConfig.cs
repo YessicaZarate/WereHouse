@@ -23,7 +23,7 @@ namespace WereHouse
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/Cyborg.css",
                       "~/Content/site.css"));
         }
     }

@@ -40,7 +40,7 @@ namespace WereHouse.ViewModels
         [Display(Name = "Warranty (In Weeks):")]
         public int Warranty { get; set; } //In weeks
 
-        [Display(Name = "Acquisition Date (DD/MM/YYYY):")]
+        [Display(Name = "Acquisition Date:")]
         [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
         public DateTimeOffset? DateAd { get; set; } //Date when the items arrived
 

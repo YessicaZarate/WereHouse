@@ -151,6 +151,7 @@ namespace WereHouse.Controllers
             model.Provider = prods.Provider;
             model.Warranty = prods.Warranty;
             model.DateAd = prods.DateAd;
+            
          
             return View(model);
         }
@@ -188,6 +189,7 @@ namespace WereHouse.Controllers
                     exProd.Provider = model.Provider;
                     exProd.Warranty = model.Warranty;
                     exProd.DateAd = model.DateAd;
+                    exProd.DateUp = DateTimeOffset.Now;
                 }
                 else
                 {
@@ -226,6 +228,8 @@ namespace WereHouse.Controllers
             model.Provider = prods.Provider;
             model.Warranty = prods.Warranty;
             model.DateAd = prods.DateAd;
+            model.DateCr = prods.DateCr;
+            model.DateUp = prods.DateUp;
 
             return View(model);
         }

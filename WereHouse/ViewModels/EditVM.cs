@@ -24,11 +24,11 @@ namespace WereHouse.ViewModels
         public int Qty { get; set; } //In stock
 
         [Display(Name = "Cost:")]
-        [DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
+        //[DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
         public double Cost { get; set; }
 
         [Display(Name = "Sale Price:")]
-        [DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
+        //[DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
         public double Price { get; set; }
 
         [Display(Name = "Country of Origin:")]
@@ -43,5 +43,9 @@ namespace WereHouse.ViewModels
         [Display(Name = "Acquisition Date (DD/MM/YYYY):")]
         [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}", ApplyFormatInEditMode = true)]
         public DateTimeOffset? DateAd { get; set; } //Date when the items arrived
+
+        [Display(Name = "Date Updated:")]
+        [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}", ApplyFormatInEditMode = true)]
+        public DateTimeOffset? DateUp { get; set; } 
     }
 }

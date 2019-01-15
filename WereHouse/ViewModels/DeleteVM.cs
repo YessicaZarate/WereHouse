@@ -40,16 +40,16 @@ namespace WereHouse.ViewModels
         [Display(Name = "Warranty (In Weeks):")]
         public int Warranty { get; set; } //In weeks
 
-        [Display(Name = "Acquisition Date (DD/MM/YYYY):")]
-        //[DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
+        [Display(Name = "Acquisition Date:")]
+        [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
         public DateTimeOffset? DateAd { get; set; } //Date when the items arrived
 
         [Display(Name = "Date Created:")]
-        //[DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
         public DateTimeOffset? DateCr { get; set; } //Creation date for the field
 
         [Display(Name = "Date Updated:")]
-        //[DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd / MM / yyyy}")]
         public DateTimeOffset? DateUp { get; set; }//Updating date for the field
     }
 }
